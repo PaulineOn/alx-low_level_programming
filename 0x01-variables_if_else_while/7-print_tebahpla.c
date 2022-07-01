@@ -1,16 +1,17 @@
 #include <stdio.h>
 /**
- *main -> assign a random number to the variable n each time it is executed
- *and print the last digit of the number stored in the variable n
+ *main - Entry point
  *Return: Always 0 (Success)
  */
-int mani(void)
+int main(void)
 {
-char ch;
-for (ch = 'z'; ch >= 'a', ch--)
+int s;
+s = 122;
+while (s >= 97)
 {
-putchar(ch);
+putchar(s)
+s--;
 }
-putchar(10); /* this is an ascii code for new line*/
+putchar('\n');
 return (0);
 }
