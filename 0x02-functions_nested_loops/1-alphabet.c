@@ -4,7 +4,7 @@
  */
 void print_alphabet(void)
 {
-	int j 
+	int j; 
         for (j = 'a'; j <= 'z'; j++)
 	{
 		_putchar (j);
