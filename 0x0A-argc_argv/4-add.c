@@ -22,7 +22,7 @@ return (1);
 }
 for (k = 1; k < argc; k++)
 {
-um = atoi(argv[k]);
+num = atoi(argv[k]);
 result += num;
 }
 printf("%d\n", result);
