@@ -1,20 +1,55 @@
 #include "main.h"
 /**
- * create_array -> creating array
- * @size: size of array to be created
- * @c: character an array is initialized with
- * Return: a pointer to an array
+ *_strlen - count array
+ *@s: array of elements
+ *Return: 1
  */
-char *create_array(unsigned int size, char c)
+int _strlen(char *s)
 {
 unsigned int i;
-char *s;
-if (size == 0)
+i = 0;
+while (s[i] != '\0') /*count character of string*/
+{
+i++;
+}
+return (i);
+}
+/**
+ *_strcpy - copy arrays
+ *@src: array of elements
+ *@dest: dest array
+ *Return: dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+int i = 0;
+while (src[i] != '\0')
+{
+dest[i] = src[i];
+i++;
+}
+dest[i] = '\0';
+return (dest);
+}
+/**
+ *_strdup - array for prints a string
+ *@str: array of elements
+ *Return: pointer
+ */
+char *_strdup(char *str)
+{
+char *dst;
+unsigned int size;
+if (str == 0)
+{
 return (NULL);
-s = (char *)malloc(size * sizeof(char));
-if (s == NULL)
+}
+size = _strlen(str) + 1;
+dst = (char *) malloc(size *sizeof(char));
+if (dst == 0)
+{
 return (NULL);
-for (i = 0; i < size; i++)
-s[i] = c;
-return (s);
+}
+_strcpy(dst, str);
+return (dst);
 }
